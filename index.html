@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Browser Redirect</title>
+  <style>
+    body {
+      text-align: center;
+      padding-top: 100px;
+      background-color: #f0f0f0;
+    }
+    .message {
+      font-size: 1.5rem;
+      color: #333;
+    }
+  </style>
+  <!---자바스크립트 IE 필터 시작----><script>
+    // 브라우저 감지 및 리디렉션
+    window.onload = function () {
+      var ua = window.navigator.userAgent;
+      var isIE = ua.indexOf('MSIE ') > -1 || ua.indexOf('Trident/') > -1;
+
+      if (isIE) {
+        // IE인 경우 IE.html로 이동
+        window.location.href = "IE.html";
+      } else {
+        // 그 외 브라우저는 XPP SW로 이동
+        window.location.href = "https://sites.google.com/view/xppsoftware-co-kr";
+      }
+    };
+  </script>  <!---자바스크립트 IE 필터 끝---->
+</head>
+<body>
+  <div class="message">Please wait a moment</div>
+</body>
+</html>
